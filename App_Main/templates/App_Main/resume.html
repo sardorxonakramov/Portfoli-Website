@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<main class="main">
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>{% trans 'Resume' %}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Page Title -->
+  <!-- Resume Section -->
+  <section id="resume" class="resume section">
+    <div class="container">
+      <div class="row">
+
+        <!-- Left Column -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          {% if comment %}
+          <h3 class="resume-title">{% trans 'Summary' %}</h3>
+          <div class="resume-item pb-0">
+            <h4>{{ comment.owner.fullname }}</h4>
+            <ul>
+              <li>{{ comment.owner.address }}</li>
+              <li>{{ comment.owner.email }}</li>
+              <h5>{{ comment.subject }}</h5>
+              <li>{{ comment.body }}</li>
+            </ul>
+          </div>
+          {% endif %}
+          {% if educations %}
+          <h3 class="resume-title">{% trans 'Education' %}</h3>
+          {% for education in educations %}
+          <div class="resume-item">
+            <h4>{{ education.name }}</h4>
+            <h5>{{ education.start_date|date:"Y M" }} - {{ education.finish_date|date:"Y M" }}</h5>
+            <p><em>{{ education.position }}</em></p>
+            <p>{{ education.description }}</p>
+          </div>
+          {% endfor %}
+          {% endif %}
+
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+
+          {% if experiences %}
+          <h3 class="resume-title">{% trans 'Professional Experience' %}</h3>
+          {% for experience in experiences %}
+          <div class="resume-item">
+            <h4>{{ experience.name }}</h4>
+            <h5>{{ experience.start_date|date:"Y M" }} - {{ experience.finish_date|date:"Y M" }}</h5>
+            <p><em>{{ experience.position }}</em></p>
+            <ul>
+              {% for comment in experience.experiencedescription_set.all %}
+              <li>{{ comment.description }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+          {% endif %}
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+</main>
+{% endblock content %}

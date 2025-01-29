@@ -1,0 +1,59 @@
+{% load i18n %}
+{% load static %}
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+    <a href="{% url 'home' %}" class="logo d-flex align-items-center">
+      <img src="{% static 'logo/logo.jpg' %}" alt="">
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">{% trans 'Home' %}</a></li>
+        <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">{% trans 'About' %}</a></li>
+        <li><a href="{% url 'resume' %}" class="{% if request.resolver_match.url_name == 'resume' %}active{% endif %}">{% trans 'Resume' %}</a></li>
+        <li><a href="{% url 'service' %}" class="{% if request.resolver_match.url_name == 'service' %}active{% endif %}">{% trans 'Services' %}</a></li>
+        <li><a href="{% url 'portfolio' %}" class="{% if request.resolver_match.url_name == 'portfolio' %}active{% endif %}">{% trans 'Portfolio' %}</a></li>
+        <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">{% trans 'Contact' %}</a></li>
+        <li>
+          <form id="language-form" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+            <input name="next" type="hidden" value="{{ request.path }}">
+            <select id="language" name="language"
+              style="background-color: rgb(0, 0, 0); color: rgb(25, 245, 25); border: none; padding: 2px 0px;">
+              {% get_current_language as LANGUAGE_CODE %}
+              {% get_available_languages as LANGUAGES %}
+              {% get_language_info_list for LANGUAGES as languages %}
+              {% for language in languages %}
+              <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected{% endif %}>{{ language.code | upper }}
+              </option>
+              {% endfor %}
+            </select>
+          </form>
+        </li>
+        {% if user.is_authenticated %}
+        <li class="dropdown"><span>{{ user.first_name }}</span>
+          <ul>
+            <li><a href="{% url 'user_profile' %}">Profile</a></li>
+            <form method="post" action="{% url 'logout' %}">
+              {% csrf_token %}
+              <li>
+                <a><button type="submit" style="all: unset;" class="a">{% trans 'Logout' %}</button></a>
+              </li>
+            </form>
+          </ul>
+        </li>
+        {% else %}
+        <li><a href="{% url 'login' %}"><b>{% trans 'LogIn' %}</b></a></li>
+        {% endif %}
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+  </div>
+</header>
+<script type="text/JavaScript">
+  const languageForm = document.getElementById('language-form');
+  const language = document.getElementById('language');
+
+  language.addEventListener('change', () => languageForm.submit());
+</script>

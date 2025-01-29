@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title" data-aos="fade">
+    <div class="heading">
+      <div class="container">
+        <div class="row d-flex justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1>{% trans 'Contact' %}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-md-6">
+          <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+            <i class="icon bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>{% trans 'Address' %}</h3>
+              <p>{{ person.address }}</p>
+            </div>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class="col-md-6">
+          <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
+            <i class="icon bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>{% trans 'Call Me' %}</h3>
+              <a href="TEL:/{{person.phone_number}}">{{person.phone_number }}</a>
+            </div>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class="col-md-6">
+          <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
+            <i class="icon bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>{% trans 'Email Us' %}</h3>
+              <a href="MAILTO:/{{person.email}}">{{person.email }}</a>
+            </div>
+          </div>
+        </div><!-- End Info Item -->
+
+        
+<div class="col-md-6">
+  <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
+    <i class="icon bi bi-share flex-shrink-0"></i>
+    <div>
+      <h3>{% trans 'Social Profiles' %}</h3>
+      <div class="social-links">
+        {% if person.instagram %}
+          <a href="{{ person.instagram }}" target="_blank"><i class="bi bi-instagram"></i></a>
+        {% endif %}
+        {% if person.telegram %}
+          <a href="{{ person.telegram }}" target="_blank"><i class="bi bi-telegram"></i></a>
+        {% endif %}
+        {% if person.whatsapp %}
+          <a href="{{ person.whatsapp }}" target="_blank"><i class="bi bi-whatsapp"></i></a>
+        {% endif %}
+        {% if person.github %}
+          <a href="{{ person.github }}" target="_blank"><i class="bi bi-github"></i></a>
+        {% endif %}
+        {% if person.linkedin %}
+          <a href="{{ person.linkedin }}" target="_blank"><i class="bi bi-linkedin"></i></a>
+        {% endif %}
+        {% if person.facebook %}
+          <a href="{{ person.facebook }}" target="_blank"><i class="bi bi-facebook"></i></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div><!-- End Info Item -->
+
+      </div>
+
+      <form action="{% url 'contact' %}" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+        {% csrf_token %}
+        <div class="row gy-4">
+          {% if not user.is_authenticated %}
+          <div class="col-md-6">
+            <input type="text" name="name" class="form-control" placeholder="{% trans 'Your Name' %}" required>
+          </div>
+      
+          <div class="col-md-6">
+            <input type="email" class="form-control" name="email" placeholder="{% trans 'Your Email' %}" required>
+          </div>
+          {% endif %}
+          <div class="col-md-12">
+            <input type="text" class="form-control" name="subject" placeholder="{% trans 'Subject' %}" required>
+          </div>
+      
+          <div class="col-md-12">
+            <textarea class="form-control" name="message" rows="6" placeholder="{% trans 'Message' %}" required></textarea>
+          </div>
+      
+          <div class="col-md-12 text-center">
+            <!-- Error va muvaffaqiyat xabarlari -->
+            <div class="error-message" style="color: red; display: none;"></div>
+            <div class="send-message" style="color: green; display: none;"></div>
+          </div>
+      
+          <!-- Yuborish tugmasi -->
+          <button type="submit">{% trans 'Send Message' %}</button>
+        </div>
+      </form>
+      
+      <!-- Inline Script -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const form = document.querySelector('.php-email-form');
+          const errorDiv = document.querySelector('.error-message');
+          const successDiv = document.querySelector('.send-message');
+      
+          form.addEventListener('submit', async function (e) {
+            e.preventDefault(); // Formni default yuborilishini bloklash
+      
+            // Xabarlarni yashirish
+            errorDiv.style.display = 'none';
+            successDiv.style.display = 'none';
+      
+            try {
+              // Formni yuborish uchun so'rov
+              const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: { 'X-CSRFToken': '{{ csrf_token }}' }
+              });
+      
+              if (response.ok) {
+                const data = await response.json();
+                successDiv.style.display = 'block'; // Muvaffaqiyatli xabarni ko'rsatish
+                successDiv.textContent = data.message || "Your message has been sent successfully!";
+                form.reset(); // Formni tozalash
+              } else {
+                throw new Error('Form submission failed!');
+              }
+            } catch (error) {
+              errorDiv.style.display = 'block'; // Xato xabarini ko'rsatish
+              errorDiv.textContent = error.message;
+            }
+          });
+        });
+      </script>
+      
+      
+
+    </div>
+
+  </section><!-- /Contact Section -->
+
+</main>
+
+
+{% endblock content %}

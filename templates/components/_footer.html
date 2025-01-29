@@ -1,0 +1,36 @@
+{% load i18n %}
+<footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">Sardorxon</h3>
+      <p>{% trans 'I would be happy to work with you. Contact me' %}</p>
+      <div class="social-links d-flex justify-content-center">
+        {% if person.instagram %}
+        <a href="{{ person.instagram }}" target="_blank"><i class="bi bi-instagram"></i></a>
+      {% endif %}
+      {% if person.telegram %}
+        <a href="{{ person.telegram }}" target="_blank"><i class="bi bi-telegram"></i></a>
+      {% endif %}
+      {% if person.whatsapp %}
+        <a href="{{ person.whatsapp }}" target="_blank"><i class="bi bi-whatsapp"></i></a>
+      {% endif %}
+      {% if person.github %}
+        <a href="{{ person.github }}" target="_blank"><i class="bi bi-github"></i></a>
+      {% endif %}
+      {% if person.linkedin %}
+        <a href="{{ person.linkedin }}" target="_blank"><i class="bi bi-linkedin"></i></a>
+      {% endif %}
+      {% if person.facebook %}
+        <a href="{{ person.facebook }}" target="_blank"><i class="bi bi-facebook"></i></a>
+      {% endif %}
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Personal</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          
+          Designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade </a><span>and Me</span>
+        </div>
+      </div>
+    </div>
+  </footer>

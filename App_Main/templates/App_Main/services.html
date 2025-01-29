@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>{% trans 'Services' %}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+          {% for service in services %}
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="{{ service.logo }}"></i>
+              </div>
+                <h3>{{ service.name }}</h3>
+              <p>{{ service.description }}</p>
+            </div>
+          </div><!-- End Service Item -->
+          {% endfor %}
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+<br>
+<br>
+<br>
+<br>
+<br>
+  </main>
+{% endblock content %}

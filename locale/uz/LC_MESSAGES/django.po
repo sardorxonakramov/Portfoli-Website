@@ -1,0 +1,226 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-27 08:21+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: App_Main/templates/App_Main/about.html:12
+#, fuzzy
+#| msgid "About"
+msgid "About Me"
+msgstr "Men Haqimda"
+
+#: App_Main/templates/App_Main/about.html:35
+msgid "Birthday:"
+msgstr "tug'ilgan sana:"
+
+#: App_Main/templates/App_Main/about.html:36
+msgid "Website:"
+msgstr "Veb-sayt:"
+
+#: App_Main/templates/App_Main/about.html:37
+msgid "Phone:"
+msgstr "Telefon nommer:"
+
+#: App_Main/templates/App_Main/about.html:42
+msgid "Degree:"
+msgstr "Daraja:"
+
+#: App_Main/templates/App_Main/about.html:43
+msgid "Email:"
+msgstr "Elektron pochta:"
+
+#: App_Main/templates/App_Main/about.html:44
+msgid "City:"
+msgstr "Shaxar:"
+
+#: App_Main/templates/App_Main/about.html:90
+#: App_Main/templates/App_Main/about.html:91
+msgid "Testimonials"
+msgstr "Guvohlar"
+
+#: App_Main/templates/App_Main/about.html:91
+msgid "Check my"
+msgstr "Mening"
+
+#: App_Main/templates/App_Main/index.html:41
+msgid "Download CV"
+msgstr "CV Yuklash"
+
+#: App_Main/templates/App_Main/portfolio-detail.html:13
+msgid "Portfolio Details"
+msgstr "Portfolio Tafsilotlari"
+
+#: App_Main/templates/App_Main/portfolio-detail.html:49
+msgid "Name"
+msgstr "Ism"
+
+#: App_Main/templates/App_Main/portfolio-detail.html:50
+msgid "Client"
+msgstr "Mijoz"
+
+#: App_Main/templates/App_Main/portfolio-detail.html:51
+msgid "Project date"
+msgstr "Loyiha yakunlangan sana"
+
+#: App_Main/templates/App_Main/portfolio-detail.html:52
+msgid "Project URL"
+msgstr "Loyiha Manzili"
+
+#: App_Main/templates/App_Main/portfolio-detail.html:53
+msgid "Project GitHub"
+msgstr "Project GitHub"
+
+#: App_Main/templates/App_Main/portfolio.html:13
+#: templates/components/_nav.html:18
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: App_Main/templates/App_Main/resume.html:11 templates/components/_nav.html:16
+msgid "Resume"
+msgstr "Resume"
+
+#: App_Main/templates/App_Main/resume.html:25
+msgid "Summary"
+msgstr "Xulosa"
+
+#: App_Main/templates/App_Main/resume.html:37
+msgid "Education"
+msgstr "Ta'lim"
+
+#: App_Main/templates/App_Main/resume.html:54
+msgid "Professional Experience"
+msgstr "Professional Tajriba"
+
+#: App_Main/templates/App_Main/services.html:12
+#: templates/components/_nav.html:17
+msgid "Services"
+msgstr "Xizmatlar"
+
+#: App_Users/templates/App_Users/contact.html:13
+#: templates/components/_nav.html:20
+msgid "Contact"
+msgstr "Aloqa"
+
+#: App_Users/templates/App_Users/contact.html:31
+msgid "Address"
+msgstr "Manzil"
+
+#: App_Users/templates/App_Users/contact.html:41
+msgid "Call Me"
+msgstr "Qo'ng'iroq qiling"
+
+#: App_Users/templates/App_Users/contact.html:51
+msgid "Email Us"
+msgstr "Email orqali"
+
+#: App_Users/templates/App_Users/contact.html:62
+msgid "Social Profiles"
+msgstr "Ijtimoi Tarmoq Profillari"
+
+#: App_Users/templates/App_Users/contact.html:94
+msgid "Your Name"
+msgstr "Sizning Ismingiz"
+
+#: App_Users/templates/App_Users/contact.html:98
+msgid "Your Email"
+msgstr "Sizning Email manzilingiz"
+
+#: App_Users/templates/App_Users/contact.html:102
+msgid "Subject"
+msgstr "Mavzu"
+
+#: App_Users/templates/App_Users/contact.html:106
+msgid "Message"
+msgstr "Xabar matni"
+
+#: App_Users/templates/App_Users/contact.html:116
+msgid "Send Message"
+msgstr "Xabarni jo'natish"
+
+#: App_Users/templates/App_Users/login.html:11
+msgid "Have an account?"
+msgstr "Accountingiz bormi?"
+
+#: App_Users/templates/App_Users/login.html:18
+#: App_Users/templates/App_Users/registration.html:19
+msgid "Password"
+msgstr "Parol"
+
+#: App_Users/templates/App_Users/login.html:22
+#: App_Users/templates/App_Users/registration.html:31
+msgid "Sign In"
+msgstr "Tizimga kirish"
+
+#: App_Users/templates/App_Users/login.html:26
+#: App_Users/templates/App_Users/registration.html:27
+msgid "Sign Up"
+msgstr "Ro'yxatdan o'tish"
+
+#: App_Users/templates/App_Users/login.html:30
+#: App_Users/templates/App_Users/registration.html:35
+msgid "Forgot Password"
+msgstr "Parol unitdingizmi?"
+
+#: App_Users/templates/App_Users/login.html:34
+#: App_Users/templates/App_Users/registration.html:39
+msgid "Or Sign In With"
+msgstr "Yoki tizimga kiring"
+
+#: App_Users/templates/App_Users/registration.html:11
+msgid "Account Registration!"
+msgstr "Accountni ro'yxatdan o'tqazish"
+
+#: App_Users/templates/App_Users/registration.html:16
+msgid "Email"
+msgstr ""
+
+#: App_Users/templates/App_Users/registration.html:23
+msgid "Confirm Password"
+msgstr "Parolni Tasdiqlang"
+
+#: App_Users/templates/App_Users/user_profile.html:34
+msgid "Update Profile"
+msgstr "Profilni Yangilash"
+
+#: Config/settings.py:138
+msgid "English"
+msgstr "Ingiz"
+
+#: Config/settings.py:139
+msgid "Uzbek"
+msgstr "O'zbek"
+
+#: templates/components/_footer.html:5
+msgid "I would be happy to work with you. Contact me"
+msgstr "Siz bilan ishlashdan xursand bo'laman. Men bilan bog'laning!"
+
+#: templates/components/_nav.html:14
+msgid "Home"
+msgstr "Bosh Sahifa"
+
+#: templates/components/_nav.html:15
+msgid "About"
+msgstr "Men Haqimda"
+
+#: templates/components/_nav.html:45
+msgid "Logout"
+msgstr "Tizimdan Chiqish"
+
+#: templates/components/_nav.html:51
+msgid "LogIn"
+msgstr "Tizimga Kirish"

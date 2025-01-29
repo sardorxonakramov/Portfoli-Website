@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<style>
+  .btn {
+  background-color: rgb(17, 153, 53);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: rgb(10, 108, 34);
+}
+</style>
+<main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="{{ person.photo_fon.url }}" alt="" data-aos="fade-in">
+
+      <div class="container" data-aos="zoom-out" data-aos-delay="100">
+        <h2>{{ person.full_name }}</h2>
+        <p>I'm <span class="typed" data-typed-items="BackEnd Developer, Freelancer">Web Developer</span><span class="typed-cursor typed-cursor--blink"></span></p>
+        <div class="social-links">
+          <a href="{{ person.telegram }}" target="_blank"><i class="bi bi-telegram"></i></a>
+          <a href="{{ person.github }}" target="_blank"><i class="bi bi-github"></i></a>
+          {% if person.facebook %}
+          <a href="{{ person.facebook }}" target="_blank"><i class="bi bi-facebook"></i></a>
+          {% endif %}
+          <a href="{{ person.linkedin }}" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <br>
+     <!-- Download CV -->
+      <form action="{% url 'home' %}" method="POST">
+        {% csrf_token %}
+     <button class="btn" ><i class="fa fa-download"></i> {% trans 'Download CV' %}</button>
+    </form>
+    <!-- End Download CV -->
+      </div>
+
+    </section><!-- /Hero Section -->
+
+  </main>
+{% endblock content %}

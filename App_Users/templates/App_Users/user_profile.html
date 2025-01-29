@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<style>
+    .gradient-custom {
+        background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+    }
+</style>
+
+<section class="vh-100" style="background-color: #050b17;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-6 mb-4 mb-lg-0">
+                <div class="card mb-3" style="border-radius: .5rem;">
+                    <div class="row g-0">
+                      <div class="col-md-4 gradient-custom text-center text-white"
+                      style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                      <!-- Orqaga tugmasi -->
+                      <a href="{% url 'home' %}" class="btn btn-light btn-sm rounded-circle mt-3" style="background-color:transparent; border: none;">
+                        <i class="fa fa-arrow-left fa-3x"></i>
+                      </a><br>
+                            <img src="{{ user.image.url }}" alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                            <h5>{{ fullname }}</h5>
+                            <p>{{ user.phone }}</p>
+                            <p>{{ user.position }}</p>
+                            <p>{{ user.nationalty }}</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-4">
+                                <form method="POST" enctype="multipart/form-data" action="{% url 'user_profile' %}">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <button type="submit" class="btn btn-primary mt-3">
+                                        {% trans 'Update Profile' %}
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

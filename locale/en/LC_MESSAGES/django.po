@@ -1,0 +1,224 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-27 08:21+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: App_Main/templates/App_Main/about.html:12
+msgid "About Me"
+msgstr ""
+
+#: App_Main/templates/App_Main/about.html:35
+msgid "Birthday:"
+msgstr ""
+
+#: App_Main/templates/App_Main/about.html:36
+msgid "Website:"
+msgstr ""
+
+#: App_Main/templates/App_Main/about.html:37
+msgid "Phone:"
+msgstr ""
+
+#: App_Main/templates/App_Main/about.html:42
+msgid "Degree:"
+msgstr ""
+
+#: App_Main/templates/App_Main/about.html:43
+msgid "Email:"
+msgstr ""
+
+#: App_Main/templates/App_Main/about.html:44
+msgid "City:"
+msgstr ""
+
+#: App_Main/templates/App_Main/about.html:90
+#: App_Main/templates/App_Main/about.html:91
+msgid "Testimonials"
+msgstr ""
+
+#: App_Main/templates/App_Main/about.html:91
+msgid "Check my"
+msgstr ""
+
+#: App_Main/templates/App_Main/index.html:41
+msgid "Download CV"
+msgstr ""
+
+#: App_Main/templates/App_Main/portfolio-detail.html:13
+msgid "Portfolio Details"
+msgstr ""
+
+#: App_Main/templates/App_Main/portfolio-detail.html:49
+msgid "Name"
+msgstr ""
+
+#: App_Main/templates/App_Main/portfolio-detail.html:50
+msgid "Client"
+msgstr ""
+
+#: App_Main/templates/App_Main/portfolio-detail.html:51
+msgid "Project date"
+msgstr ""
+
+#: App_Main/templates/App_Main/portfolio-detail.html:52
+msgid "Project URL"
+msgstr ""
+
+#: App_Main/templates/App_Main/portfolio-detail.html:53
+msgid "Project GitHub"
+msgstr ""
+
+#: App_Main/templates/App_Main/portfolio.html:13
+#: templates/components/_nav.html:18
+msgid "Portfolio"
+msgstr ""
+
+#: App_Main/templates/App_Main/resume.html:11 templates/components/_nav.html:16
+msgid "Resume"
+msgstr ""
+
+#: App_Main/templates/App_Main/resume.html:25
+msgid "Summary"
+msgstr ""
+
+#: App_Main/templates/App_Main/resume.html:37
+msgid "Education"
+msgstr ""
+
+#: App_Main/templates/App_Main/resume.html:54
+msgid "Professional Experience"
+msgstr ""
+
+#: App_Main/templates/App_Main/services.html:12
+#: templates/components/_nav.html:17
+msgid "Services"
+msgstr ""
+
+#: App_Users/templates/App_Users/contact.html:13
+#: templates/components/_nav.html:20
+msgid "Contact"
+msgstr ""
+
+#: App_Users/templates/App_Users/contact.html:31
+msgid "Address"
+msgstr ""
+
+#: App_Users/templates/App_Users/contact.html:41
+msgid "Call Me"
+msgstr ""
+
+#: App_Users/templates/App_Users/contact.html:51
+msgid "Email Us"
+msgstr ""
+
+#: App_Users/templates/App_Users/contact.html:62
+msgid "Social Profiles"
+msgstr ""
+
+#: App_Users/templates/App_Users/contact.html:94
+msgid "Your Name"
+msgstr ""
+
+#: App_Users/templates/App_Users/contact.html:98
+msgid "Your Email"
+msgstr ""
+
+#: App_Users/templates/App_Users/contact.html:102
+msgid "Subject"
+msgstr ""
+
+#: App_Users/templates/App_Users/contact.html:106
+msgid "Message"
+msgstr ""
+
+#: App_Users/templates/App_Users/contact.html:116
+msgid "Send Message"
+msgstr ""
+
+#: App_Users/templates/App_Users/login.html:11
+msgid "Have an account?"
+msgstr ""
+
+#: App_Users/templates/App_Users/login.html:18
+#: App_Users/templates/App_Users/registration.html:19
+msgid "Password"
+msgstr ""
+
+#: App_Users/templates/App_Users/login.html:22
+#: App_Users/templates/App_Users/registration.html:31
+msgid "Sign In"
+msgstr ""
+
+#: App_Users/templates/App_Users/login.html:26
+#: App_Users/templates/App_Users/registration.html:27
+msgid "Sign Up"
+msgstr ""
+
+#: App_Users/templates/App_Users/login.html:30
+#: App_Users/templates/App_Users/registration.html:35
+msgid "Forgot Password"
+msgstr ""
+
+#: App_Users/templates/App_Users/login.html:34
+#: App_Users/templates/App_Users/registration.html:39
+msgid "Or Sign In With"
+msgstr ""
+
+#: App_Users/templates/App_Users/registration.html:11
+msgid "Account Registration!"
+msgstr ""
+
+#: App_Users/templates/App_Users/registration.html:16
+msgid "Email"
+msgstr ""
+
+#: App_Users/templates/App_Users/registration.html:23
+msgid "Confirm Password"
+msgstr ""
+
+#: App_Users/templates/App_Users/user_profile.html:34
+msgid "Update Profile"
+msgstr ""
+
+#: Config/settings.py:138
+msgid "English"
+msgstr ""
+
+#: Config/settings.py:139
+msgid "Uzbek"
+msgstr ""
+
+#: templates/components/_footer.html:5
+msgid "I would be happy to work with you. Contact me"
+msgstr ""
+
+#: templates/components/_nav.html:14
+msgid "Home"
+msgstr ""
+
+#: templates/components/_nav.html:15
+msgid "About"
+msgstr ""
+
+#: templates/components/_nav.html:45
+msgid "Logout"
+msgstr ""
+
+#: templates/components/_nav.html:51
+msgid "LogIn"
+msgstr ""

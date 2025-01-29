@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>{% trans 'Portfolio' %}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            {% for project in portfolio %}
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item ">
+              <div class="portfolio-content h-100">
+                <img src="{{ project.image.url }}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{{ project.name }}</h4>
+                  <p>{{ project.bio }}</p>
+                  <a href="#" title="{{ project.name }}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{% url 'portfolio_detail' project.id %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+            {% endfor %}
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+  </main>
+{% endblock content %}
