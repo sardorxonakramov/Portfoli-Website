@@ -9,6 +9,7 @@ venv/
 ENV/
 .venv/
 .Python
+.env/
 
 # Django specific files
 db.sqlite3

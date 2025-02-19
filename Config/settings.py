@@ -3,7 +3,6 @@ import os
 from pathlib import Path
 from environs import Env
 from django.utils.translation import gettext_lazy as _
-# from django.utils.translation import gettext_lazy as _
 from django.urls import reverse_lazy
 
 env = Env()
@@ -23,7 +22,7 @@ SECRET_KEY = env.str('DJANGO_SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-# ALLOWED_HOSTS = ['sardorxon.uz','www.sardorxon.uz']
+# ALLOWED_HOSTS = ['sardorxon.uz','www.sardorxon.uz', '173.212.253.164', 'www.173.212.253.164']
 
 
 # Application definition
@@ -87,23 +86,23 @@ WSGI_APPLICATION = 'Config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env.str('DB_NAME'),
-        'USER':env.str('DB_USER'),
-        'PASSWORD':env.str('DB_PASSWORD'),
-        'PORT': env.int('DB_PORT'),
-        'HOST':env.str('DB_HOST'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': env.str('DB_NAME'),
+#         'USER':env.str('DB_USER'),
+#         'PASSWORD':env.str('DB_PASSWORD'),
+#         'PORT': env.int('DB_PORT'),
+#         'HOST':env.str('DB_HOST'),
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
