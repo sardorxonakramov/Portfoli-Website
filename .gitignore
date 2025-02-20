@@ -15,7 +15,7 @@ ENV/
 db.sqlite3
 *.log
 media/
-staticfiles/
+
 *.pot
 *.pyc
 
