@@ -18,7 +18,6 @@ pathspec==0.12.1
 pillow==11.0.0
 platformdirs==4.3.6
 psycopg==3.2.3
-psycopg2==2.9.10
 pycparser==2.22
 PyJWT==2.10.1
 python-dotenv==1.0.1
